@@ -3,7 +3,7 @@
 
 A cluster computing system consists of a set of nodes (compared to an independent PC) connected. Each node has multiple processors and each processor are segmented in multiple cores. Depending upon system configuration A CPU can be either a core or a thread (a core with one or more hardware context within that). For simplicity let us think, a CPU refers to a core as was done in Yale High Performance Computing (HPC).
 
-![](C:\Onedrive\remote computing\Yale HPC\nodes.png)
+![alt text](https://github.com/yushuf/BiostatComputing/blob/master/Images/nodes.png)
 
 A structure of cluster computing system. Source: Frachtenberg (2008)
 
