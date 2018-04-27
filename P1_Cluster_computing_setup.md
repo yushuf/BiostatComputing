@@ -7,13 +7,15 @@ A cluster computing system consists of a set of nodes (compared to an independen
 
 A structure of cluster computing system. Source: Frachtenberg (2008)
 
-Yale HPC
+## Yale HPC ##
 
-![](C:\Onedrive\remote computing\Yale HPC\cluster.png)
-Structure of HPC.  Source: Yale HPC getting started guide
+
 
 ## First time in HPC ##
 For new user of Yale High Performance Computing (HPC) please follow the [Yale HPC getting started guide link](https://research.computing.yale.edu/support/hpc/getting-started) to open an account to HPC. Then we have to configure our own computer system to connect HPC. This might different for different operating system but any way that is simple to as guided in [Yale HPC user guide](https://research.computing.yale.edu/support/hpc/user-guide). 
+
+![alt text](https://github.com/yushuf/BiostatComputing/blob/master/Images/cluster.png)
+Structure of HPC.  Source: Yale HPC getting started guide
 
 Assuming we already have everything setup and we can connect to the HPC. Once get connected, we, primarily connect to a computer called a login node. This is the get way to access all the clusters and storage. We can work with login node with our own PC.  We can execute any Linux command in the node from our PC.
 
