@@ -21,6 +21,7 @@ step 1. Open an account in HPC using [Yale HPC getting started guide link](http
 Step 2. Configuring our own computer system to connect HPC. This might different for different operating system but in any ways that is not too hard as guided in [Yale HPC user guide](https://research.computing.yale.edu/support/hpc/user-guide). 
 
 ![alt text](https://github.com/yushuf/BiostatComputing/blob/master/Images/cluster.png)
+
 Structure of HPC.  Source: Yale HPC getting started guide
 
 Once we have an account and our own computer is ready we can have access to HPC any time from any places (VPN support may needed to connect from outside the Yale network).  When we get connected to HPC, we, primarily connect to a node called as login node. This is the get way to access all the other nodes and storage of HPC. We can operate the login node from our own PC.  We can execute any Linux command in the node as we do in our linux PCs.
