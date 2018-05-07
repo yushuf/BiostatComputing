@@ -1,5 +1,5 @@
 # Multithreading #
-
+Not finished
 You can also create a job in the following way
 
     #!/bin/bash 
@@ -19,3 +19,5 @@ You can also create a job in the following way
 
 
 while CPUs, for the multithreaded programs, are requested with the --cpus-per-task option. Tasks cannot be split across several compute nodes, so requesting several CPUs with the --cpus-per-task option will ensure all CPUs are allocated on the same compute node. By contrast, requesting the same amount of CPUs with the --ntasks option may lead to several CPUs being allocated on several, distinct compute nodes.
+
+Next: [Job Array](https://github.com/yushuf/BiostatComputing/blob/master/Array.md)
