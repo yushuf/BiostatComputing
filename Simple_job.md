@@ -29,6 +29,8 @@ While defining a job in cluster we should synchronize the tasks and resource req
 
 Second, Suppose, in the above example, the *python* code will run and retain a data set which will be used as input for *R* script. In this situation, we need a little plan for where the data will be stored and how *R* will locate the data. This kind of issues can be handled in this part. We will discuss these issues while discussing the resource allocation.
 
-We will first describe some simpler jobs and will show gradually how we can design some complected jobs to get faster output.
+We will first describe some simpler jobs and will show gradually how we can design some complected jobs to get faster output. At first we will perform a manual parallel processing with *bash* loop
+
+Next: [Simple parallel processing](https://github.com/yushuf/BiostatComputing/blob/master/Simple_job.md)
 
 
