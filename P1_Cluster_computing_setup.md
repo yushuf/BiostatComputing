@@ -22,5 +22,5 @@ Computing involves with some programming languages (e.g. R, Python, Julia). To r
 
 We will start with interactive sessions in HPC. During interactive session nothing to do with SLURM. All you need is Bash/Linux commands
 
-Interactive sessions with HPC
+Next: [Interactive sessions with HPC](https://github.com/yushuf/BiostatComputing/blob/master/Interactive_sessions.md)
 
