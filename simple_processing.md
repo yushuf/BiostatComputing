@@ -49,4 +49,4 @@ We can define a single task to run on a single processor. A task is defined base
 
 Next we will utilize 20 processor to get the same result. Our intention is to generate a 5 instances in each processor.
 
-Multiple processing with Bash commands
+Next: [Parallel processing with Bash loop](https://github.com/yushuf/BiostatComputing/blob/master/Simple_parallel_processing.md)
