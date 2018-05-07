@@ -31,6 +31,6 @@ Second, Suppose, in the above example, the *python* code will run and retain a d
 
 We will first describe some simpler jobs and will show gradually how we can design some complected jobs to get faster output. At first we will create a job and run that using SLURM
 
-Next: [Simple parallel processing](https://github.com/yushuf/BiostatComputing/blob/master/simple_processing.md)
+Next: [Creating a simple job](https://github.com/yushuf/BiostatComputing/blob/master/simple_processing.md)
 
 
