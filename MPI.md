@@ -40,4 +40,4 @@ One thing we should mention, the `--ntasks` option will allocate 1 CPU per task 
 Since only one CPU allocated for each of the task, if a task contains a processing that you intended to run parallel into multiple processor, MPI would not help. In that case we need a CPU with multiple cores which is sometimes referred as multithreaded program.
 
 
-Next: Shared memory (OpenMP)
+Next: [Multithreading](https://github.com/yushuf/BiostatComputing/blob/master/Multithreading.md)

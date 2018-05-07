@@ -66,4 +66,6 @@ Now run the file *vcov.r* from the terminal. Assuming R is already loaded into t
       x        -0.003818426 0.001675144
 working!!!
 
-Once the working environment and code is ready, we can look for creating a job to run the process multiple times. First we will see what consists of a job and how SLURM and Bash works to create a job for HPC
+Once the working environment and code is ready, we can look for creating a job to run the process multiple times. First we will see what consists of a job and how SLURM and Bash works to create a job for HPC.
+
+Next: [Creating a job](https://github.com/yushuf/BiostatComputing/blob/master/Simple_job.md)
