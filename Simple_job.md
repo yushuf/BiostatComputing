@@ -31,6 +31,6 @@ Second, Suppose, in the above example, the *python* code will run and retain a d
 
 We will first describe some simpler jobs and will show gradually how we can design some complected jobs to get faster output. At first we will perform a manual parallel processing with *bash* loop
 
-Next: [Simple parallel processing](https://github.com/yushuf/BiostatComputing/blob/master/Simple_job.md)
+Next: [Simple parallel processing](https://github.com/yushuf/BiostatComputing/blob/master/Simple_parallel_processing.md)
 
 
