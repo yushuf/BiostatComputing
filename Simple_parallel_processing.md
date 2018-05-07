@@ -1,4 +1,4 @@
-#Simple parallel processing using bash loop#
+# Simple parallel processing using bash loop #
 
 We can run the process multiple times in different processors using the bash loop. The trick is to submit a job multiple times using a loop and the outcome file will be named by the job number. After that we will accumulate the results from all outcome data files to get the desired data. Let us modify the previous *R* code.
 
@@ -64,7 +64,7 @@ The output requires post processing to use them for further analysis. Bash comma
 
 The problem with this method is that in each job the cluster is doing the same things repeatedly such as allocating resources, loading the software and running the R code from the very first line. We can make it smart with Massage Passing Interface (MPI)
 
-Next: Parallel processing with MPI
+Next: [Parallel processing with MPI](https://github.com/yushuf/BiostatComputing/blob/master/MPI.md)
 
 
 
