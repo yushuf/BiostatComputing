@@ -1,4 +1,5 @@
 # Multithreading #
+<<<<<<< HEAD
 
 Suppose you have a task that includes a combination of multiple smaller tasks with different functions and the smaller tasks may be dependent on each other. What we can run the code in a CPU which has multiple cores and we wished to run each of the smaller tasks into different cores of the CPU parallel. This kind of task is simple to define in python but writing multithreaded code is difficult in *R* and sometimes not safe. But we can utilized the multiple cores in a single CPU to run the same function with different input using using some palatalization commands like `mclapply`
  
@@ -6,6 +7,9 @@ To give a flavor of how multithreading works, let us rewrite the *R* code in a w
 
 
 
+=======
+Not finished
+>>>>>>> c529687c969fc61a97b8485eeb59311ab687eade
 You can also create a job in the following way
 
     #!/bin/bash 
@@ -25,3 +29,5 @@ You can also create a job in the following way
 
 
 while CPUs, for the multithreaded programs, are requested with the --cpus-per-task option. Tasks cannot be split across several compute nodes, so requesting several CPUs with the --cpus-per-task option will ensure all CPUs are allocated on the same compute node. By contrast, requesting the same amount of CPUs with the --ntasks option may lead to several CPUs being allocated on several, distinct compute nodes.
+
+Next: [Job Array](https://github.com/yushuf/BiostatComputing/blob/master/Array.md)
