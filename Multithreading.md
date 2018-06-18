@@ -1,5 +1,11 @@
 # Multithreading #
 
+Suppose you have a task that includes a combination of multiple smaller tasks with different functions and the smaller tasks may be dependent on each other. What we can run the code in a CPU which has multiple cores and we wished to run each of the smaller tasks into different cores of the CPU parallel. This kind of task is simple to define in python but writing multithreaded code is difficult in *R* and sometimes not safe. But we can utilized the multiple cores in a single CPU to run the same function with different input using using some palatalization commands like `mclapply`
+ 
+To give a flavor of how multithreading works, let us rewrite the *R* code in a way that search for multiple processor to perform a single task.
+
+
+
 You can also create a job in the following way
 
     #!/bin/bash 
