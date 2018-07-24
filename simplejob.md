@@ -12,7 +12,7 @@ Example of a job
     #SBATCH --ntasks=1 # number of requested CPU
     #SBATCH --mem-per-cpu=1gb # Per processor memory
     #SBATCH -t 1:00:00 # Walltime 1 hours
-    
+
     module load Python/3.5.1-foss-2016a R/3.3.1-foss-2016a
     python example1.py
     Rscript example2.R
@@ -25,12 +25,8 @@ Usually those jobs are created in a text file and stored in *.sbatch* extension.
 
     sbatch example.sbatch
 
-While defining a job in cluster we should synchronize the tasks and resource request to run the task. Our objective is to allocate resources and define tasks so that we can perform multiple tasks in parallel to get output within a reasonable time. 
+While defining a job in cluster we should synchronize the tasks and resource request to run the task. Our objective is to allocate resources and define tasks so that we can perform multiple tasks in parallel to get output within a reasonable time.
 
 Second, Suppose, in the above example, the *python* code will run and retain a data set which will be used as input for *R* script. In this situation, we need a little plan for where the data will be stored and how *R* will locate the data. This kind of issues can be handled in this part. We will discuss these issues while discussing the resource allocation.
 
 We will first describe some simpler jobs and will show gradually how we can design some complected jobs to get faster output. At first we will create a job and run that using SLURM
-
-Next: [Creating a simple job](https://github.com/yushuf/BiostatComputing/blob/master/simple_processing.md)
-
-

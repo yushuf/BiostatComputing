@@ -20,14 +20,14 @@ Suppose we need a version of software that is not installed in the cluster. We c
     [ms3628@farnam1 ~]$ R
     > install.packages("multiwayvcov", lib = "/ysm-gpfs/home/ms3628/myrlib")
     > ##Check you library paths
-    > .libPaths() 
+    > .libPaths()
     [1] "/gpfs/ysm/apps/software/R/3.3.1-foss-2016a/lib64/R/library"
     > ##Set your library to the library path and check##
     > .libPaths("/gpfs/ysm/home/ms3628/myrlib")
     > .libPaths()
     [1] "/gpfs/ysm/home/ms3628/myrlib"
     [2] "/gpfs/ysm/apps/software/R/3.4.1-foss-2016b/lib64/R/library"
-    > ##Now you are all set to use the library as you do in your code with 
+    > ##Now you are all set to use the library as you do in your code with
     your personal computer##
     > q() # quite from R
 Commands starts with [ are the bash commands and > are the r commands. A library "myrlib" has been created and an R library "multiwayvcov" installed into that folder. Finally we added the "myrlib" location to the library path of R so that while running, R search the library in my specified location.
@@ -60,12 +60,10 @@ Now run the file *vcov.r* from the terminal. Assuming R is already loaded into t
     Coefficients:
     (Intercept) x
      1.1369 0.6766
-    
+
     (Intercept)  x
     (Intercept) 0.008703953 -0.003818426
       x        -0.003818426 0.001675144
 working!!!
 
 Once the working environment and code is ready, we can look for creating a job to run the process multiple times. First we will see what consists of a job and how SLURM and Bash works to create a job for HPC.
-
-Next: [Creating a job](https://github.com/yushuf/BiostatComputing/blob/master/Simple_job.md)

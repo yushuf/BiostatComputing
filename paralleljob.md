@@ -3,11 +3,11 @@
 We can run the process multiple times in different processors using the bash loop. The trick is to submit a job multiple times using a loop and the outcome file will be named by the job number. After that we will accumulate the results from all outcome data files to get the desired data. Let us modify the previous *R* code.
 
     File Name: r_example2.r
-    
-    r_example <- function(){ 
-    x <- lapply(1:10, function(i) rnorm(1, mean = 0, sd = 1)) 
-    round( unlist(x), 4) 
-    } 
+
+    r_example <- function(){
+    x <- lapply(1:10, function(i) rnorm(1, mean = 0, sd = 1))
+    round( unlist(x), 4)
+    }
     r_example()
 
 File name: example2.sbatch
@@ -21,7 +21,7 @@ File name: example2.sbatch
     #SBATCH -t 00:10:00 # Wall time 0 hours 10 minutes 0 seconds
     #SBATCH --error=example2_%j.txt # Error files if error. %j is job number
     #SBATCH --output=res%j.out
-    
+
     module load R/3.4.3
     Rscript r_example2.r
 
@@ -29,7 +29,7 @@ The output file names of each of the job is *res* followed by the job number *%j
 
     for i in {1..100}; do sbatch example2.sbatch; done
 
-this bash command will provide 100 res*.out files. Let us append them in a single file. 
+this bash command will provide 100 res*.out files. Let us append them in a single file.
 
 for example in this case the combined output looks like
 
@@ -39,19 +39,19 @@ for example in this case the combined output looks like
     [1] 0.7189 -0.4648 -2.3699 -0.4917 0.1180 -1.0486 -0.1197 0.6385 -2.4213
     [10] 0.4233 ...
 
-    
+
 To get this as a data frame or matrix for further analysis, we can use regular expression in bash commands to remove the *R* index [1] and [10] and taking each single output in a single line and append the. Here is an option to do that.
 
     for file in res*.out
-    do 
+    do
     awk -F" " '{print $2,$3, $4, $5, $6, $7, $8, $9}' $file > t_"$file"
     echo $(cat t_"$file" )> t_"$file"
     done
     cat t_*.out <- dat.out
-    
+
 Now the data is ready to import in *R* for further analysis. It will be a tab delimited data file without any variable name.
-    
-    
+
+
     [ms3628@farnam1 hpc]$cat dat.out
     -0.5870 1.9116 0.8395 -0.4478 -0.1295 -0.6501 -0.4614 0.4746 -0.4019
     -0.5654 1.6447 -0.0111 1.1727 1.1582 0.2432 0.1597 0.3563 0.1778
@@ -63,8 +63,3 @@ We can use multiple CPU from command line or by looping the same job multiple ti
 The output requires post processing to use them for further analysis. Bash commands are useful to handle them.
 
 The problem with this method is that in each job the cluster is doing the same things repeatedly such as allocating resources, loading the software and running the R code from the very first line. We can make it smart with Massage Passing Interface (MPI)
-
-Next: [Parallel processing with MPI](https://github.com/yushuf/BiostatComputing/blob/master/MPI.md)
-
-
-

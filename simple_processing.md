@@ -48,5 +48,3 @@ CPU time =  Elapsed time X Number of CPU. Same time elapsed as for single CPU a
 We can define a single task to run on a single processor. A task is defined based on how we get the output. Though we repeated a function within a single process 100 times, this is a single task performed by a single processor.
 
 Next we will utilize 20 processor to get the same result. Our intention is to generate a 5 instances in each processor.
-
-Next: [Parallel processing with Bash loop](https://github.com/yushuf/BiostatComputing/blob/master/Simple_parallel_processing.md)

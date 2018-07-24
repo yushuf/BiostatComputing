@@ -14,7 +14,7 @@ Define the job as follows
     #SBATCH --time=00:10:00 # Wall time 0 hours 10 minutes 0 seconds
     #SBATCH --error=example1_%j.txt # Error files if error. %j is job
     #SBATCH --output=res.out
-    
+
     module load OpenMPI/2.1.1-GCC-6.4.0-2.28 R/3.4.1-foss-2016b
     srun Rscript r_example2.r
 Requested 10 CPUs for 10 minutes with 1GB memory. The difference with previous job is loading *openMPI* and the `srun` command. To run openMPI, the module *GCC* will be loaded automatically. The command`srun` created 10 copies of the task to the processors and returned the results in the output file res.out. The result would look like this
@@ -35,9 +35,6 @@ As usual, you might requires some post processing to use the output further.
 We performed 10 tasks with 10 CPUs with shortest time elapsed.
 
 
-One thing we should mention, the `--ntasks` option will allocate 1 CPU per task no matter where it is. May be the CPUs are in different nodes. 
+One thing we should mention, the `--ntasks` option will allocate 1 CPU per task no matter where it is. May be the CPUs are in different nodes.
 
 Since only one CPU allocated for each of the task, if a task contains a processing that you intended to run parallel into multiple processor, MPI would not help. In that case we need a CPU with multiple cores which is sometimes referred as multithreaded program.
-
-
-Next: [Multithreading](https://github.com/yushuf/BiostatComputing/blob/master/Multithreading.md)
